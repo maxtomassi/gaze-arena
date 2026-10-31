@@ -1,0 +1,18 @@
+# Generated images and voice lines for Goal Party (see docs/asset-pipeline.md).
+# Run `npm run assets -w games/goal-party` by hand; never during build, dev or tests.
+style: arena-night          # shared style from tools/asset-gen/styles/arena-night/
+assets:
+  - id: stadium-night
+    type: image
+    out: public/assets/img/stadium-night.webp
+    size: [1920, 1080]
+    transparent: false
+    prompt: >
+      Wide view of a football stadium at night from pitch level, stands full of
+      cartoon fans, four floodlights, pitch in the lower 60% of the image,
+      empty central area, no players, no text, no logos.
+
+  - id: chant-goal
+    type: voice
+    text: { en: "GOOOAL!", it: "GOOOL!" }
+    out: public/assets/audio/{locale}/chant-goal.mp3

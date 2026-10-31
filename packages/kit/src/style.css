@@ -1,0 +1,151 @@
+@import '@fontsource/bangers/400.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/700.css';
+
+:root {
+  --ga-night: #0b1a3a;
+  --ga-arena: #16306b;
+  --ga-yellow: #ffd60a;
+  --ga-magenta: #ff2e88;
+  --ga-cyan: #00e5ff;
+  --ga-white: #ffffff;
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ga-night);
+  color: var(--ga-white);
+  font-family: Inter, system-ui, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+#game canvas {
+  display: block;
+}
+
+.ga-adult {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(11 26 58 / 80%);
+  user-select: text;
+}
+
+.ga-adult[hidden] {
+  display: none;
+}
+
+.ga-adult__card {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 24px 28px;
+  border: 4px solid var(--ga-white);
+  border-radius: 20px;
+  background: var(--ga-arena);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 50%);
+}
+
+.ga-adult h2 {
+  margin: 0 0 16px;
+  font-family: Bangers, Inter, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--ga-yellow);
+}
+
+.ga-field {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.ga-field--check {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.ga-field select,
+.ga-field input[type='range'] {
+  width: 100%;
+  font: inherit;
+}
+
+.ga-field select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--ga-white);
+  background: var(--ga-night);
+  color: var(--ga-white);
+}
+
+.ga-note {
+  margin: -6px 0 14px;
+  font-size: 14px;
+  color: var(--ga-cyan);
+}
+
+.ga-adult__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ga-adult__actions button {
+  padding: 10px 18px;
+  border: 3px solid var(--ga-white);
+  border-radius: 10px;
+  background: var(--ga-magenta);
+  color: var(--ga-white);
+  font: 700 16px Inter, sans-serif;
+  cursor: pointer;
+}
+
+.ga-adult__actions button[hidden] {
+  display: none;
+}
+
+.ga-adult :focus-visible {
+  outline: 4px solid var(--ga-yellow);
+  outline-offset: 2px;
+}
+
+.ga-sim-overlay {
+  position: fixed;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.ga-sim-badge {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 60;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 70%);
+  color: var(--ga-cyan);
+  font: 700 14px Inter, sans-serif;
+  pointer-events: none;
+}

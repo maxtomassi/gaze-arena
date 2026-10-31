@@ -1,0 +1,28 @@
+{
+  "name": "@gaze-arena/kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./core": "./src/core.ts",
+    "./vite": "./vite/index.ts",
+    "./style.css": "./src/style.css",
+    "./testing": "./testing/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "sounds": "node scripts/make-placeholder-sounds.mjs"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.13"
+  },
+  "dependencies": {
+    "@fontsource/bangers": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "howler": "^2.2.4",
+    "phaser": "^4.2.1",
+    "vite-plugin-pwa": "^2.0.0"
+  }
+}

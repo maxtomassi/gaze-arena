@@ -1,0 +1,18 @@
+{
+  "name": "@gaze-arena/game-goal-party",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "node ../../scripts/serve-subpath.mjs --dir dist --base /goal-party/",
+    "test": "vitest run",
+    "e2e": "npm run build && playwright test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gaze-arena/kit": "*",
+    "phaser": "^4.2.1"
+  }
+}

@@ -1,0 +1,4 @@
+# Generated images and voice lines for this game (see docs/asset-pipeline.md).
+# Run `npm run assets -w games/__GAME_ID__` by hand; never during build, dev or tests.
+style: arena-night
+assets: []

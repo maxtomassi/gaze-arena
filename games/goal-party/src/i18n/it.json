@@ -1,0 +1,11 @@
+{
+  "goalParty.title": "Festa Gol!",
+  "goalParty.counter": "feste: {count} / {next}",
+  "goalParty.counterDone": "feste: {count}",
+  "goalParty.score": "SEGNA!",
+  "goalParty.kneeSlide": "Scivolata",
+  "goalParty.somersault": "Capriola",
+  "goalParty.airplane": "Aeroplano",
+  "goalParty.shirtOverHead": "Maglia su",
+  "goalParty.chant": "GOOOL!"
+}
